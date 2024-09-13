@@ -3,7 +3,7 @@
 - Clone the static analyzer repo - https://github.com/BhardwajArjit/static_analyzer
 - After Cloning, go the folder and run 
 ``` bash
-    docker build -t static-analyzer .
+    docker build -t static_analyzer .
 ```
 - After the docker image is generated successfully, run the following
 ``` bash
