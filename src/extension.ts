@@ -5,12 +5,14 @@ import * as fs from 'fs';
 export function activate(context: vscode.ExtensionContext) {
 	console.log('Congratulations, your extension "code-scanner" is now active!');
 	const disposable = vscode.commands.registerCommand('code-scanner.scan',async () => {
-		const files = await vscode.workspace.findFiles(`**/*.{java}`,"");
-		files.forEach((file)=>{
-			vscode.workspace.openTextDocument(file).then(doc => {
-				sendDoc(doc);
-			})
-		})
+		const editor = vscode.window.activeTextEditor;
+
+        if (editor) {
+            const doc = editor.document;
+            sendDoc(doc);
+        } else {
+            console.log('No active editor found.');
+        }
 	});
 
 	context.subscriptions.push(disposable);
