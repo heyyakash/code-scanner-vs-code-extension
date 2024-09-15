@@ -1,4 +1,4 @@
-# Code Scanner VS Code Extension
+# Vuln-Eye Code Scanner Plugin
 ## How to run the scanner server locally
 - Clone the static analyzer repo - https://github.com/BhardwajArjit/static_analyzer
 - After Cloning, go the folder and run 
